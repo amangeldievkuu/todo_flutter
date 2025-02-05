@@ -203,7 +203,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const Text("Not a member?"),
+                    Text(
+                      "Have an account?",
+                      style: TextStyle(color: Colors.grey.shade600),
+                    ),
                     const SizedBox(width: 5),
                     GestureDetector(
                       onTap: () =>

@@ -182,9 +182,24 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                GestureDetector(
-                  onTap: () => Navigator.of(context).push(RegisterPage.route()),
-                  child: Text("register"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Not a member?",
+                      style: TextStyle(color: Colors.grey.shade600),
+                    ),
+                    const SizedBox(width: 5),
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.of(context).push(RegisterPage.route()),
+                      child: const Text(
+                        "Sign up",
+                        style: TextStyle(
+                            color: Colors.blue, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
